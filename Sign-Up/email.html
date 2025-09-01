@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Verification</title>
+    <link rel="stylesheet" href="email.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Left Side: Image -->
+      <div class="left">
+        <!-- You could add extra branding text here if you want -->
+      </div>
+
+      <!-- Right Side: Verification Form -->
+      <div class="right">
+        <div class="back-arrow">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="currentColor"
+              d="M19 11H7.14l3.63-4.36a1 1 0 1 0-1.54-1.28l-5 6a1 1 0 0 0-.09.15c0 .05 0 .08-.07.13A1 1 0 0 0 4 12a1 1 0 0 0 .07.36c0 .05 0 .08.07.13a1 1 0 0 0 .09.15l5 6A1 1 0 0 0 10 19a1 1 0 0 0 .64-.23a1 1 0 0 0 .13-1.41L7.14 13H19a1 1 0 0 0 0-2"
+            />
+          </svg>
+        </div>
+
+        <div class="card">
+          <h2>Email Verification</h2>
+          <p class="digit">We sent a 4-digit code to your email</p>
+          <p class="security">
+            For security reasons, the code will expire in 30 minutes.<br />
+            Keep this window open while checking your code.
+          </p>
+
+          <p class="digit">Enter the 4-digit verification code below</p>
+          <div class="code-inputs">
+            <input type="text" maxlength="1" />
+            <input type="text" maxlength="1" />
+            <input type="text" maxlength="1" />
+            <input type="text" maxlength="1" />
+          </div>
+
+          <div class="info-text">
+            Didn’t receive an email? <br />
+            Check your spam folder too. Didn’t get the code?
+            <a href="#">Resend the code</a>
+          </div>
+        </div>
+
+        <div class="alt-option">Sign up with a different email</div>
+      </div>
+    </div>
+  </body>
+</html>
