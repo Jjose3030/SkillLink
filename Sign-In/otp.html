@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OTP Verification</title>
+    <link rel="stylesheet" href="otp.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Left side -->
+      <div class="otp-box">
+        <a href="#" class="back-link">← Back to login</a>
+
+        <h2>OTP Code Verification</h2>
+        <p class="instruction">
+          We've sent an OTP code to your email
+          <strong>joe*****el@gmail.com</strong>. Enter the OTP code below to
+          verify.
+        </p>
+
+        <label for="otp" class="otp-label"
+          >Enter the 4-digit verification code below</label
+        >
+        <div class="otp-inputs">
+          <input type="text" maxlength="1" />
+          <input type="text" maxlength="1" />
+          <input type="text" maxlength="1" />
+          <input type="text" maxlength="1" />
+        </div>
+
+        <p class="resend">
+          Didn’t receive an email?<br />
+          You can resend code <span class="timer">55s</span>
+        </p>
+
+        <button class="btn">Continue</button>
+      </div>
+
+      <!-- Right side -->
+      <div class="image-side">
+        <img src="/Images/LogPage/Frame 106.png" alt="Security Illustration" />
+      </div>
+    </div>
+  </body>
+</html>

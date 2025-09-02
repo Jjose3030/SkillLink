@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+:root {
+  --color-green: rgba(15, 166, 116);
+  --Light-background: rgba(249, 250, 251);
+  --color-faint: rgba(227, 242, 237);
+  --color-black: rgba(15, 28, 47);
+  --icon-color: rgba(31, 31, 31);
+  --white-color: rgba(255, 255, 255);
+  --color-red: rgba(239, 68, 68);
+  --color-pending: rgba(238, 217, 217);
+  --color-complete: rgba(210, 223, 243);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--white-color);
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
+  border-radius: 10px;
+  overflow: hidden;
+  background: white;
+}
+
+.left {
+  flex: 1;
+  background: url("/Images/LogPage/Frame\ 104.png") no-repeat center
+    center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+}
+
+.right {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.back-arrow {
+  font-size: 20px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 30px;
+  border-radius: 8px;
+  background: #fff;
+  text-align: center;
+
+  height: 625px;
+  width: 636px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.card h2 {
+  width: 616px;
+  height: 48px;
+  font-weight: 600;
+  font-size: 39.81px;
+  margin-bottom: 10px;
+}
+
+.digit {
+  color: #0f1c2f;
+  height: 19px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.security {
+  color: #0f1c2f;
+  height: 47px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.code-inputs {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 20px;
+}
+
+.code-inputs input {
+  width: 71px;
+  height: 88px;
+  text-align: center;
+  font-size: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.info-text {
+  font-size: 14px;
+  margin-top: 10px;
+  height: 59px;
+}
+
+.info-text a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.alt-option {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 16px;
+  color: #0f1c2f;
+}
