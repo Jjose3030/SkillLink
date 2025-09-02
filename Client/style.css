@@ -174,7 +174,7 @@ header {
 }
 /* styling for the content page header */
 .content-page-header {
-    padding-inline: 15px;;
+    padding: 10px 15px;;
     display: flex;
     justify-content: space-between;
     background-color: var(--white-color);
@@ -333,6 +333,7 @@ p.account-name {
     border-radius: 5px;
     flex-direction: column;
     height: max-content;
+    box-shadow: 0px 0px 3px var(--color-black), 0px 0px 3px var(--Light-background), 0px 0px 3px var(--color-black);
 }
 .dashboard-grid-items > p {
     font-size:35px;
@@ -416,6 +417,7 @@ p.account-name {
     background-color: var(--white-color);
     padding: 15px;
     border-radius: 8px;
+    box-shadow: 0px 0px 3px var(--color-black), 0px 0px 3px var(--Light-background), 0px 0px 3px var(--color-black);
 }
 .dashboard-footer {
     margin-top: 20px;
@@ -435,7 +437,7 @@ p.account-name {
     background-color: var(--white-color);
     border-radius: 8px;
     padding: 10px;
-    
+    box-shadow: 0px 0px 3px var(--color-black), 0px 0px 3px var(--Light-background), 0px 0px 3px var(--color-black);
 }
 .applicants-cont {
     display: grid;
@@ -601,6 +603,8 @@ p.account-name {
     display: flex;
     background-color: var(--white-color);
     align-items: center;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px var(--color-black), 0px 0px 3px var(--Light-background), 0px 0px 3px var(--color-black);
 }
 .talent-input-search input {
     padding: 13px;
@@ -632,6 +636,7 @@ p.talent-icon i {
     border-radius: 8px;
     flex-direction: column;
     gap: 15px;
+    box-shadow: 0px 0px 3px var(--color-black), 0px 0px 3px var(--Light-background), 0px 0px 3px var(--color-black);
 }
 .tal-cat {
     display: flex;
@@ -734,6 +739,7 @@ p.talent-icon i {
     border-radius: 8px;
     display: flex;
     flex-direction: column;
+    box-shadow: 0px 0px 3px var(--color-black), 0px 0px 3px var(--Light-background), 0px 0px 3px var(--color-black);
 }
 .talent-header {
     display: flex;
@@ -962,7 +968,7 @@ p.m-but1, .mm-but1 {
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-    box-shadow: 0px 0px 1px var(--color-complete);
+    box-shadow: 0px 0px 3px var(--color-black), 0px 0px 3px var(--Light-background), 0px 0px 3px var(--color-black);
 }
 .chat-header {
     border-bottom: 1.5px solid var(--color-faint);
@@ -990,7 +996,7 @@ p.m-but1, .mm-but1 {
     gap: 5px;
 }
 .worker {
-    background-color: var(--ease);
+    background-color: var(--comp);
     color: var(--color-black);
     align-self: flex-start;
 }
@@ -1013,9 +1019,10 @@ span.time {
     flex: 1;
     border: 1px solid var(--color-faint);
     outline: none;
-    border-radius: 8px;
-    padding: 10px 8px;
+    border-radius: 5px;
+    padding: 10px;
     font-size: 14px;
+    background-color: var(--color-faint);
 }
 .chat-footer input::placeholder {
     color: var(--color-black);
@@ -1082,6 +1089,7 @@ span.time {
     display: flex;
     gap: 15px;
     align-items: center;
+    box-shadow: 0px 0px 3px var(--color-black), 0px 0px 3px var(--Light-background), 0px 0px 3px var(--color-black);
 }
 p.dollar {
     background-color: var(--color-faint);
@@ -1090,6 +1098,7 @@ p.dollar {
     width: 50px;
     height: 50px;
     display: flex;
+    flex-shrink: 0;
     justify-content: center;
     align-items: center;
     
@@ -1162,6 +1171,7 @@ p.pend {
     align-items: center;
     border-radius: 8px;
     cursor: pointer;
+    box-shadow: 0px 0px 3px var(--color-black), 0px 0px 3px var(--Light-background), 0px 0px 3px var(--color-black);
 }
 .with-method {
     display: flex;
@@ -1242,6 +1252,7 @@ p.ang-right {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    box-shadow: 0px 0px 3px var(--color-black), 0px 0px 3px var(--Light-background), 0px 0px 3px var(--color-black);
 }
 .rev-select {
     display: flex;
@@ -1347,6 +1358,8 @@ label[for=private] span {
     background-color: var(--white-color);
     border-radius: 8px;
     padding: 10px;
+    box-shadow: 0px 0px 3px var(--color-black), 0px 0px 3px var(--Light-background), 0px 0px 3px var(--color-black);
+
 }
 .rev-footer .comp-review-item {
     display: flex;
@@ -1387,6 +1400,7 @@ label[for=private] span {
     align-self: flex-start;
     padding: 30px 15px;
     border-radius: 8px;
+    box-shadow: 0px 0px 3px var(--color-black), 0px 0px 3px var(--Light-background), 0px 0px 3px var(--color-black);
 }
 .rev-tips {
     display: flex;
@@ -1418,6 +1432,7 @@ label[for=private] span {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    box-shadow: 0px 0px 3px var(--color-black), 0px 0px 3px var(--Light-background), 0px 0px 3px var(--color-black);
 }
 .history-rev .rev-review {
     display: flex;
@@ -1492,6 +1507,7 @@ label[for=private] span {
     background-color: var(--white-color);
     padding: 10px 5px;
     border-radius: 8px;
+    box-shadow: 0px 0px 3px var(--color-black), 0px 0px 3px var(--Light-background), 0px 0px 3px var(--color-black);
 }
 .help-body summary {
     padding-inline: 6px;
@@ -1529,6 +1545,9 @@ label[for=private] span {
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0px 0px 3px var(--color-black), 0px 0px 3px var(--Light-background), 0px 0px 3px var(--color-black);
+    border-radius: 6px;
+    overflow: hidden;
 }
 .help-topic-item p a {
     background-color: var(--white-color);
@@ -1537,7 +1556,7 @@ label[for=private] span {
     align-items: center;
     width: 100%;
     padding: 10px;
-    border-radius: 6px;
+
     font-size: 16px;
     text-decoration: none;
     font-weight: 600;
@@ -1555,7 +1574,7 @@ label[for=private] span {
 }
 .logout-cont {
     background-color: var(--white-color);
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     height: 350px;
     padding: 30px;
@@ -1579,7 +1598,7 @@ label[for=private] span {
     }
 }
 .logout-cont > h2 {
-    font-size: 35px;
+    font-size: 28px;
     text-align: center;
 }
 .logout-buttons {
@@ -1932,6 +1951,9 @@ margin-top: 30px;
     width: 100%;
 
 }
+.rev-select select option {
+    font-size: 12px;
+}
 .mile-detail-cont {
     width: 100%;
     display: grid;
@@ -1945,6 +1967,20 @@ margin-top: 30px;
 .p-but1 {
     font-size: 14px;
 }
+.history-rev .comp-review-item {
+   padding: 15px;
+}
+.history-rev .rev-review {
+    flex-direction: column;
+    text-align: center;
+}
+.rev-details p {
+    text-align: center;
+}
+
+
+
+
 .logout-cont {
     width: 90%;
     gap: 3rem;
@@ -1996,8 +2032,14 @@ p.log-memo {
     .pay-cont {
     grid-template-columns:  1fr;
 }
+#payment .content-page-header {
+    flex-direction: column;
+    gap: 10px;
+}
 .pay-but1 {
-    display: none;
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
 }
 p.comp, p.pend {
     width: max-content;
@@ -2022,14 +2064,23 @@ p.comp, p.pend {
     padding: 9px 0;
     font-size: 18px;
 }
+ .pay-method-item2  {
+    flex-direction: column;
+    padding: 15px;
+ }
+.with-method2 {
+    align-items: center;
+    width: 100%;
+}
+.with-method2 p {
+    font-size: 18px;
+}
 .add-button {
-    margin-inline: 0px;
+    width: 100%;
 }
 .add-but1 {
-    width: max-content;
-    padding: 8px 5px;
-    gap: 1px;
-    font-size: 13px;
+    width: 100%;
+    font-size: 15px;
 }
 }
 @media (max-width: 380px) {
@@ -2076,6 +2127,9 @@ p.comp, p.pend {
 .with-method p {
     font-size: 13px;
 }
+.pay-but1 {
+    padding: 12px;
+}
 }
 @media (max-width: 325px) {
 .dashboard-grid-items > p {
@@ -2100,6 +2154,12 @@ p.comp, p.pend {
     padding: 8px;
     font-size: 13px;
 }
+.history-header, .payment-tran {
+    grid-template-columns: repeat(4, 1fr);
+}
+ .payment-tran p:nth-child(2) , .history-header p:nth-child(2) {
+    display: none;
+ }
 .logout-cont > h2 {
     font-size: 16px;
 }
