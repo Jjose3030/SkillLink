@@ -1,14 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 :root {
     --color-green: rgba(15, 166, 116);
+    --dark-green: #043e2b;
     --Light-background: rgba(249, 250, 251);
     --color-faint: rgba(227, 242, 237);
     --color-black: rgba(15, 28, 47);
+    --dark-blue: #030f3e;
     --icon-color: rgba(31, 31, 31);
     --white-color: rgba(255, 255, 255);
     --color-red: rgba(239, 68, 68);
     --color-pending: rgba(238, 217, 217);
     --color-complete: rgba(210, 223, 243);
+    --color-gray: rgb(80, 78, 78);
+    --gray-backgrond: rgba(216, 216, 218, 0.2);
 }
 
 * {
@@ -35,12 +39,19 @@
 }
 
 .nav-links a {
-    color: var(--icon-color);
+    color: var(--dark-green);
     text-decoration: none;
+    font-weight: 500;
 }
 .nav-links a:hover {
-    color: var(--color-black);
+    color: var(--dark-green);
     font-weight: bold;
+}
+.nav-links a:active {
+    font-weight: bold;
+}
+.nav-links a:visited {
+    color: var(--dark-green);
 }
 .ul-login {
   padding: 10px 20px;
@@ -87,6 +98,12 @@
     width: 100%;
     border-radius: 10px;
 }
+.nav-menu:active {
+    font-weight: bold;
+}
+.nav-menu:visited {
+    color: var(--icon-color);
+}
 #menu-icon {
   display: none;
 }
@@ -113,10 +130,13 @@
 .container1-text h1 {
     font-size: 57px;
     font-weight: 600;
+    color: var(--color-black);
 }
 .container1-text p {
     margin-bottom: 50px;
     line-height: 1.4;
+    font-weight: 600;
+    color: rgb(80, 78, 78);
 }
 .container1-btn1 {
     background-color: var(--color-green);
@@ -129,11 +149,16 @@
     width: 210px;
     margin-right: 10px;
     transition: all 0.3s ease;
+    text-decoration: none;
 }
+
 .container1-btn1:hover {
     background-color: var(--white-color);
     border: 1px solid var(--color-green);
     color: var(--color-green);
+}
+.container1-btn1:visited {
+    color: var(--dark-green);
 }
 .container1-btn2 {
     background-color: var(--white-color);
@@ -145,10 +170,14 @@
      height: 45px;
      width: 170px;
      transition: all 0.3s ease;
+     text-decoration: none;
 }
 .container1-btn2:hover {
     background-color: var(--color-green);
     color: var(--white-color);
+}
+.container1-btn2:visited {
+    color: var(--dark-green);
 }
 .container1-image {
     width: 45%;
@@ -162,14 +191,16 @@
     width: 100%;
     height: 650px;
     margin-top: 50px;
-    background-color: var(--color-complete);
+    background-color: rgba(216, 216, 218, 0.2);
 }
 .container2 h1 {
     text-align: center;
     font-size: 40px;
     font-weight: 600;
     padding-top: 50px;
+    color: var(--color-black);
 }
+
 
 .container2-flexdiv {
     display: flex;
@@ -189,10 +220,26 @@
     justify-content: center;
     border-radius: 10px;
 }
+
+.user-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: var(--color-faint);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    align-self: center;
+}
+.svg-client {
+    width: 30px;
+    height: 30px;
+}
 .container2-div1 p, .container2-div2 p {
     width: 70%;
     margin-inline: auto;
-    color: var(--color-black);
+    color: var(--dark-green);
     font-weight: 500;
 }
 .container2-div1 h2, .container2-div2 h2 {
@@ -207,6 +254,7 @@
     border-radius: 5px;
     transition: all 0.3s ease;
     box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2), 0 0 20px 0 rgba(0, 0, 0, 0.19);
+    text-decoration: none;
 }
 .container2-btn1:hover, .container2-btn2:hover {
     background-color: var(--white-color);
@@ -214,17 +262,21 @@
     border: 1px solid var(--color-green);
     box-shadow: none;
 }
+.container2-btn1:visited, .container2-btn2:visited {
+    color: var(--dark-green);
+}
 
 
 .container3 {
     width: 100%;
     height: 600px;
-    background-color: var(--Light-background);
+    background-color: var(--white-color);
 }
 .container3 h1 {
     text-align: center;
     font-size: 40px;
     padding-block: 50px;
+    color: var(--color-black);
 }
 .container3-flexdiv {
     display: flex;
@@ -253,7 +305,7 @@
     font-weight: 600;
     width: 90%;
     margin-inline: auto;
-    color: var(--color-black);
+    color: var(--dark-green);
 }
 .container3-div h2 {
     color: var(--color-green);
@@ -263,7 +315,7 @@
     width: 100%;
     min-height: 800px;
     height: auto;
-    background-color: lightblue;
+    background-color: var(--gray-backgrond);
 }
 .container4-grid {
     display: grid;
@@ -277,6 +329,7 @@
 .container4-h1 {
     text-align: center;
     padding: 50px 0;
+    color: var(--color-black);
 }
 .container4-div1 {
     grid-column: 1 / 3;
@@ -309,7 +362,7 @@
 }
 .container4-div2-p, .container4-div1-p {
     width: 80%;
-    color: var(--color-black);
+    color: var(--dark-green);
     font-style: italic;
 }
 .namediv p {
@@ -317,7 +370,7 @@
     font-size: 13px;
 }
 .namediv h4 {
-    color: var(--color-black);
+    color: var(--dark-green);
 }
 .container4-div3 {
     grid-row: 1 / 3;
@@ -336,7 +389,7 @@
     font-weight: 600;
 }
 .container4-div3 p {
-    color: var(--color-black);
+    color: var(--dark-green);
     font-weight: bold;
 }
 .container4-btnlink {
@@ -356,6 +409,9 @@
     background-color: var(--white-color);
     border: 1px solid var(--color-green);
     box-shadow: none;
+}
+.container4-btnlink:visited {
+    color: var(--dark-green);
 }
 .container4-btndiv {
     text-align: center;
@@ -385,7 +441,7 @@
     column-gap: 10%; 
 }
 .container5-div1 p, .container5-div2 p, .container5-div3 p, .container5-div4 p {
-    color: var(--color-black);
+    color: var(--dark-green);
     font-weight: bold;
 }
 .container5-div1, .container5-div2, .container5-div3, .container5-div4 {
@@ -406,6 +462,9 @@
     background-color: var(--color-green);
     color: var(--white-color);
 }
+.container5-btnlink:visited {
+    color: var(--dark-green);
+}
 .container5-btndiv {
     text-align: right;
     margin-right: 9%;
@@ -416,7 +475,7 @@
 .container6 {
     width: 100%;
     height: 400px;
-    background-color: rgb(172, 195, 238);
+    background-color: var(--color-faint);
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -426,6 +485,13 @@
     width: 43%;
     margin: 0 auto;
     margin-bottom: 10px;
+    font-weight: 600;
+    color: var(--color-gray);
+}
+.container6 h1 {
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--color-black);
 }
 .container6-link1 {
     color: white;
@@ -437,13 +503,15 @@
     border-radius: 5px;
     transition: all 0.3s ease;
     box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2), 0 0 20px 0 rgba(0, 0, 0, 0.19);
-    /*display: inline-block;*/
 }
 .container6-link1:hover {
     color: var(--color-green);
     background-color: var(--white-color);
     border: 1px solid var(--color-green);
     box-shadow: none;
+}
+.container6-link1:visited {
+    color: var(--dark-green);
 }
 .container6-link2 {
     color: var(--color-green);
@@ -458,6 +526,9 @@
     border: none;
     background-color: var(--color-green);
 }
+.container6-link2:visited {
+    color: var(--dark-green);
+}
 
 footer {
     width: 100%;
@@ -467,7 +538,26 @@ footer {
 .empty {
     width: 100%;
     height: 90px;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--color-faint);
+}
+.footer-icon-div {
+    display: flex;
+    gap: 5px;
+}
+.footer-icon-div div {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: var(--color-faint);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    align-self: center;
+}
+.foot-icon {
+    width: 15px;
+    height: 15px;
 }
 .footer-flex {
     width: 100%;
@@ -486,10 +576,13 @@ footer {
 }
 .footer-flex ul li a{
     text-decoration: none;
-    color: var(--color-black);
+    color: var(--dark-green);
 }
 .footer-flex ul li a:hover {
     font-weight: 600;
+}
+.footer-flex ul li a:visited {
+    color: var(--dark-green);
 }
 .footer-div1 {
     width: 350px;
@@ -497,13 +590,17 @@ footer {
 .footer-div5 {
     width: 100%;
     height: 40px;
-    border-top: 1px solid black;
+    border-top: 1px solid var(--color-faint);
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--dark-green);
+    font-weight: 600;
+    margin-top: 50px;
 }
 .bold-li {
     font-weight: bold;
+    color: var(--dark-green);
 }
 
 
