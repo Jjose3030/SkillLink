@@ -196,6 +196,7 @@ textarea {
     border: 2px solid var(--color-green);
     resize: none;
     margin-bottom: 15px;
+    padding: 10px;
 }
 textarea:focus {
     outline: none;
