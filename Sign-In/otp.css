@@ -29,7 +29,8 @@ body {
 
 .container {
   display: flex;
-  width: 800px;
+  height: 100vh;
+  width: 1440px;
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -39,6 +40,10 @@ body {
 .otp-box {
   flex: 1;
   padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .back-link {

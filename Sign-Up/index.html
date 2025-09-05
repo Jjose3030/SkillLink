@@ -7,146 +7,155 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Left section -->
+    <!-- Top Navigation Bar (Mobile) -->
+    <header class="topbar" role="banner">
+      <a class="brand" href="#">
+        <span class="brand-icon" aria-hidden="true">
+          <img
+            src="../Images/Logo/Frame 228.png"
+            alt="SkillLink logo"
+            class="logo-img"
+          />
+        </span>
+      </a>
+
+      <button
+        class="menu-btn"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none">
+          <path
+            d="M3 6h18M3 12h18M3 18h18"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+        </svg>
+      </button>
+    </header>
+
+    <nav id="mobile-menu" class="mobile-drawer" hidden>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Help</a>
+    </nav>
+
     <main class="container">
-      <section class="split left">
-        <div class="centered">
-          <p>
-            Let's Get <br />
-            Started
-          </p>
-        </div>
-      </section>
+      <div class="left">
+        <h1>Let's Get<br />Started!</h1>
+      </div>
 
-      <!-- Right section -->
-      <section class="split right">
-        <form action="" method="post">
-          <h2>Create Account</h2>
-
-          <!-- Name -->
-          <div class="form-group">
-            <div class="form-row first-form">
-              <label for="firstName">First Name</label>
-              <input
+      <div class="right">
+        <h2>Create Account</h2>
+        <form>
+          <div class="row">
+            <label for="firstName"
+              >First Name<input
                 type="text"
-                name="firstName"
-                id="firstName"
                 placeholder="Enter your first name"
+                id="firstName"
+                name="firstName"
                 required
-              />
-            </div>
-            <divv class="form-row">
-              <label for="firstNmae">Last Name</label>
-              <input
+            /></label>
+
+            <label for="lastName"
+              >Last Name<input
                 type="text"
-                name="lastName"
-                id="lastName"
                 placeholder="Enter your last name"
+                id="lastName"
+                name="lastName"
                 required
-              />
-            </divv>
+            /></label>
           </div>
 
-          <!-- Email -->
-          <div class="form-div">
-            <label for="email">Email</label>
-            <input
+          <label for="email"
+            >Email<input
               type="email"
-              name="email"
-              id="email"
               placeholder="Enter your email"
+              id="email"
+              name="email"
               required
-            />
-          </div>
+          /></label>
 
-          <!-- Password -->
-          <div class="form-div">
-            <label for="password">Password</label>
-            <input
+          <label for="password"
+            >Password<input
               type="password"
-              name="password"
-              id="password"
               placeholder="Create password"
+              id="password"
+              name="password"
               required
-            />
-            <small>Must be up to 8 characters</small>
-          </div>
+            /><small>Must be up to 8 characters</small></label
+          >
 
-          <!-- Confirm Password -->
-          <div class="form-div">
-            <label for="confirmPassword">Confirm Password</label>
-            <input
+          <label for="confirmPassword"
+            >Confirm Password<input
               type="password"
-              name="confirmPassword"
-              id="confirmPassword"
               placeholder="Confirm password"
+              id="confirmPassword"
+              name="confirmPassword"
               required
-            />
-          </div>
+          /></label>
 
-          <!-- Terms and Conditions -->
-          <div class="checkbox">
-            <label for="terms"
-              ><input type="checkbox" name="terms" id="terms" required /> I
-              agree with <a href="#">Terms</a> and
-              <a href="#">Privacy Policy</a></label
+          <label class="checkbox">
+            <input type="checkbox" /> I agree with <a href="#">Terms</a> and
+            <a href="#">Privacy Policy</a>
+          </label>
+
+          <button type="submit" class="btn">Create Account</button>
+
+          <div class="divider">OR</div>
+
+          <button type="button" class="google-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="48"
+              height="48"
+              viewBox="0 0 48 48"
             >
-          </div>
+              <path
+                fill="#ffc107"
+                d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8c-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C12.955 4 4 12.955 4 24s8.955 20 20 20s20-8.955 20-20c0-1.341-.138-2.65-.389-3.917"
+              />
+              <path
+                fill="#ff3d00"
+                d="m6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C16.318 4 9.656 8.337 6.306 14.691"
+              />
+              <path
+                fill="#4caf50"
+                d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238A11.9 11.9 0 0 1 24 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44"
+              />
+              <path
+                fill="#1976d2"
+                d="M43.611 20.083H42V20H24v8h11.303a12.04 12.04 0 0 1-4.087 5.571l.003-.002l6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917"
+              />
+            </svg>
+            Sign up with Google
+          </button>
 
-          <!-- Submit Button -->
-          <div>
-            <button class="btn btn-primary">Create Account</button>
-          </div>
-
-          <div class="or-divider">OR</div>
-
-          <div>
-            <a
-              class="google-btn"
-              href="https://accounts.google.com/signup"
-              target="_blank"
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="48"
-                height="48"
-                viewBox="0 0 48 48"
-              >
-                <path
-                  fill="#ffc107"
-                  d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8c-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C12.955 4 4 12.955 4 24s8.955 20 20 20s20-8.955 20-20c0-1.341-.138-2.65-.389-3.917"
-                />
-                <path
-                  fill="#ff3d00"
-                  d="m6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C16.318 4 9.656 8.337 6.306 14.691"
-                />
-                <path
-                  fill="#4caf50"
-                  d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238A11.9 11.9 0 0 1 24 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44"
-                />
-                <path
-                  fill="#1976d2"
-                  d="M43.611 20.083H42V20H24v8h11.303a12.04 12.04 0 0 1-4.087 5.571l.003-.002l6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917"
-                />
-              </svg>
-              Sign up with Google</a
-            >
-          </div>
-
-          <div class="login-link">
+          <p class="login-text">
             Already have an account? <a href="#">Log in</a>
-          </div>
+          </p>
         </form>
-
-        <!-- <div class="form-container">
-          <div>
-            <div>
-              <h3>OR</h3>
-            </div>
-            <p><a href="#">Sign up with Google</a></p>
-            <p>Already have an account? <a href="#">Log in</a></p>
-          </div>
-        </div> -->
-      </section>
+      </div>
     </main>
+
+    <script>
+      const btn = document.querySelector(".menu-btn");
+      const drawer = document.getElementById("mobile-menu");
+
+      if (btn && drawer) {
+        btn.addEventListener("click", () => {
+          const isOpen = btn.getAttribute("aria-expanded") === "true";
+          // toggle aria-expanded
+          btn.setAttribute("aria-expanded", String(!isOpen));
+          // toggle the hidden attribute (keeps semantic hidden behavior)
+          drawer.hidden = isOpen;
+          // toggle class for CSS animation (max-height/opacity)
+          drawer.classList.toggle("open", !isOpen);
+        });
+      }
+    </script>
   </body>
 </html>

@@ -18,146 +18,401 @@
   font-family: "Inter", sans-serif;
 }
 
+html,
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f3f3f3;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: var(--Light-background);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
   display: flex;
-  height: 100vh;
   width: 100%;
-  max-width: 1200px;
-  margin: auto;
-  border-radius: 10px;
+  max-width: 1440px;
+  height: 100vh;
+  background: #fff;
+  border-radius: 12px;
   overflow: hidden;
-  background: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-.left {
+/* Left Section (Form) */
+.login-form {
   flex: 1;
   padding: 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  margin-top: 100px;
 }
 
-.left h2 {
+.login-form h2 {
   margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 39.81px;
+  color: #111827;
 }
 
-.left p {
-  margin-bottom: 25px;
-  color: #555;
+.login-form .subtitle {
+  margin-bottom: 20px;
+  color: #6b7280;
+  font-size: 0.9rem;
 }
 
-.form-group {
-  margin-bottom: 15px;
-}
-
-.form-group input {
+input[type="email"],
+input[type="password"] {
   width: 100%;
   padding: 12px;
+  margin: 10px 0;
   border: 1px solid #ccc;
   border-radius: 6px;
-  font-size: 14px;
 }
 
-.form-row {
+.password-row {
+  position: relative;
+}
+
+.password-row input {
+  padding-right: 110px; /* space for forgot link */
+}
+
+.password-row .forgot {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.85rem;
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.checkbox {
+  font-size: 0.9rem;
+  margin: 15px 0;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 14px;
-  margin-bottom: 15px;
-}
-
-.form-row label {
-  display: flex;
   align-items: center;
 }
 
-.form-row input {
+.checkbox input {
   margin-right: 8px;
 }
 
-.form-row a {
-  color: #2563eb;
-  text-decoration: none;
-}
-
 .btn {
-  width: 100%;
-  padding: 12px;
+  background: #10b981;
+  color: #fff;
   border: none;
+  padding: 14px;
   border-radius: 6px;
-  font-size: 16px;
   cursor: pointer;
+  font-size: 1rem;
+  margin-top: 10px;
+  width: 100%;
 }
 
-.btn-primary {
-  background-color: var(--color-green);
-  color: white;
+.btn:hover {
+  background: #0f9a6c;
 }
 
-.account-link {
-  margin-top: 15px;
+.switch-text {
   text-align: center;
-  font-size: 14px;
+  margin: 15px 0;
+  font-size: 0.9rem;
 }
 
-.account-link a {
-  color: #2563eb;
+.switch-text a {
+  color: #10b981;
   text-decoration: none;
 }
 
-.or-divider {
+.password-row {
+  position: relative;
+}
+
+.password-row input {
+  padding-right: 40px; /* space for the eye icon */
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 1rem;
+  color: #6b7280;
+}
+
+.toggle-password:hover {
+  color: #111827;
+}
+
+.checkbox-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.checkbox-row .checkbox {
   display: flex;
   align-items: center;
+  font-size: 0.9rem;
+}
+
+.checkbox-row .forgot {
+  font-size: 0.9rem;
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.checkbox-row .forgot:hover {
+  text-decoration: underline;
+}
+
+.divider {
   text-align: center;
   margin: 20px 0;
-  font-size: 14px;
+  font-size: 0.85rem;
   color: #666;
+  position: relative;
 }
 
-.or-divider::before,
-.or-divider::after {
+.divider::before,
+.divider::after {
   content: "";
-  flex: 1;
-  border-bottom: 1px solid #ccc;
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background: #ddd;
 }
 
-.or-divider:not(:empty)::before {
-  margin-right: 0.75em;
+.divider::before {
+  left: 0;
 }
-
-.or-divider:not(:empty)::after {
-  margin-left: 0.75em;
+.divider::after {
+  right: 0;
 }
 
 .social-login {
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  gap: 60px;
+  gap: 12px;
   margin-top: 15px;
 }
 
-.social-login svg {
-  width: 24px;
-  height: 24px;
+.social-login button {
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  padding: 10px;
+  width: 44px;
+  height: 44px;
+  background: #fff;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.right {
+.social-login img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Right Section (Image) */
+.login-image {
   flex: 1;
-  background: url(/Images/LogPage/Frame\ 103.png) no-repeat center center/cover;
+  background: url("../Images/LogPage/Frame\ 103.png") no-repeat center
+    center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: #fff;
+  padding: 20px;
+}
+
+.login-image h1 {
   font-size: 2.5rem;
   font-weight: bold;
+  line-height: 1.2;
   text-align: center;
-  padding: 20px;
+}
+
+.logo-img {
+  height: 32px;
+  width: auto;
+  display: block;
+}
+
+/* 
+   TOPBAR (hidden on desktop) */
+.topbar {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  /* body flow */
+  body {
+    display: block;
+    height: auto;
+    overflow-y: auto;
+  }
+
+  /* Topbar appears for mobile */
+  .topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    height: 80px;
+
+    border-bottom: 1px solid #d2dff3;
+    margin-bottom: 10px;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #0b1420;
+    font-weight: 600;
+  }
+
+  /* svg icons in the brand should use currentColor */
+  .brand-icon {
+    color: #10b981;
+    display: inline-flex;
+  }
+
+  .login-image {
+    position: relative;
+    order: -1; /* moves above form */
+    flex: none;
+    width: 100%;
+    height: 355px;
+    margin: 16px auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 8px;
+  }
+
+  .logo-img {
+    height: 44px; /* adjust to your logo size */
+    width: auto;
+    display: block;
+  }
+
+  .brand-text {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #0b1420;
+  }
+
+  .menu-btn {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 8px;
+    line-height: 0;
+    cursor: pointer;
+    color: #111827;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  }
+
+  .menu-btn:focus {
+    outline: 3px solid rgba(16, 185, 129, 0.18);
+  }
+
+  /* Mobile drawer: hidden by default with smooth slide */
+  .mobile-drawer {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.28s ease, opacity 0.28s ease;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    z-index: 35;
+  }
+
+  /* When open, allow room and fade in */
+  .mobile-drawer.open {
+    display: block;
+    max-height: 360px; /* adjust to expected content height */
+    opacity: 1;
+  }
+
+  .mobile-drawer a {
+    display: block;
+    padding: 12px 16px;
+    color: #111827;
+    text-decoration: none;
+    border-bottom: 1px solid #f3f4f6;
+    border-bottom: 1px solid #f3f4f6;
+  }
+
+  /* make sure the main card moves down under the topbar */
+  .container {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    box-shadow: none;
+    margin-top: 8px;
+    overflow: scroll;
+  }
+
+  .login-image h1 {
+    font-size: 2rem;
+  }
+
+  .login-form {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  /* ensure the "forgot" link doesn't overlap badly on tiny screens */
+  .password-row input {
+    padding-right: 94px;
+  }
+}
+
+/* very small screens */
+@media (max-width: 400px) {
+  .login-image h1 {
+    font-size: 1.6rem;
+  }
+  .login-form h2 {
+    font-size: 1.5rem;
+  }
+  .password-row input {
+    padding-right: 76px;
+  }
+
+  .login-image {
+    position: relative;
+    order: -1; /* moves above form */
+    flex: none;
+    width: 324px;
+    height: 165px;
+    margin: 16px auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 8px;
+  }
 }
