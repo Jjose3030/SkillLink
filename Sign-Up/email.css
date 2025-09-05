@@ -19,24 +19,28 @@
 
 body {
   font-family: "Inter", sans-serif;
-  background-color: var(--white-color);
+  background-color: #ccc;
+  padding: 35px;
 }
 
 .container {
-  display: flex;
-  height: 100vh;
+ display: grid;
+ grid-template-columns: repeat(2, 1fr);
   width: 100%;
   /* max-width: 1440px; */
   margin: auto;
   border-radius: 10px;
   overflow: hidden;
-  background: white;
+  background: #fff;
 }
 
 .left {
+  width: 100%;
   flex: 1;
-  background: url("/Images/LogPage/Frame\ 104.png") no-repeat center
-    center/cover;
+  background-image: url("/Images/LogPage/Frame\ 104.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,7 +48,6 @@ body {
   font-size: 2rem;
   font-weight: bold;
   text-align: center;
-  padding: 20px;
 }
 
 .right {
@@ -53,6 +56,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 100%;
 }
 
 .back-arrow {
@@ -67,10 +71,7 @@ body {
   border-radius: 8px;
   background: #fff;
   text-align: center;
-
   height: 625px;
-  width: 636px;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -78,7 +79,6 @@ body {
 }
 
 .card h2 {
-  width: 616px;
   height: 48px;
   font-weight: 600;
   font-size: 39.81px;
@@ -131,4 +131,54 @@ body {
   text-align: center;
   font-size: 16px;
   color: #0f1c2f;
+}
+
+
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+  .left {
+    height: 400px;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 30px 15px;
+  }
+  .container {
+    width: 100%;
+  }
+  .left {
+    display: none;
+  }
+  .right {
+    padding: 10px;
+  }
+  .card h2 {
+    font-size: 25px;
+  }
+  .code-inputs {
+    gap: 15px;
+  }
+  .code-inputs input {
+    width: 55px;
+    height: 55px;
+  }
+}
+@media (max-width: 365px) {
+   .code-inputs input {
+    width: 50px;
+    height: 50px;
+  }
+}
+@media (max-width: 330px) {
+  .code-inputs {
+    gap: 10px;
+  }
+   .code-inputs input {
+    width: 45px;
+    height: 45px;
+  }
 }

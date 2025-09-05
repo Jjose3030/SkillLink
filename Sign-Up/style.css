@@ -23,30 +23,28 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   min-height: 100vh;
+  padding: 35px;
 }
 
 .container {
-  display: flex;
   width: 100%;
-  max-width: 1440px;
-  height: 100vh;
+ display: grid;
+ grid-template-columns: repeat(2, 1fr);
   background: #fff;
-  height: 100vh;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .left {
-  flex: 1;
-  background: url("../Images/LogPage/Frame\ 102.png") no-repeat center
-    center/cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-image: url("../Images/LogPage/Frame\ 102.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
   color: #fff;
-  padding: 20px;
 }
 
 .left h1 {
@@ -149,18 +147,6 @@ small {
   margin-left: 0.75em;
 }
 
-.google-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  border: 1px solid #ccc;
-  padding: 12px;
-  border-radius: 6px;
-  background: #fff;
-  cursor: pointer;
-}
-
 .google-btn svg {
   width: 20px;
 }
@@ -179,55 +165,13 @@ small {
 /* FINAL STYLING */
 
 /* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: inter, sans-serif;
-}
 
-body {
-  background: var(--white-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.container {
-  display: flex;
-  width: 100%;
-  max-width: 1440px;
-  background: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
 
 /* Left Section */
 .left {
-  flex: 1;
-  background: url("../Images/LogPage/Frame\ 102.png") no-repeat center
-    center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
-  padding: 20px;
-}
-
-.left h1 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  line-height: 1.2;
-  text-align: center;
-}
-
-/* Right Section */
-.right {
-  flex: 1;
-  padding: 40px;
-  margin-top: 100px;
 }
 
 .right h2 {
@@ -245,21 +189,6 @@ form {
 .row {
   display: flex;
   gap: 10px;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-  width: 100%;
-  padding: 12px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-}
-
-#firstName,
-#lastName {
-  width: 330px;
 }
 
 small {
@@ -286,7 +215,6 @@ small {
   cursor: pointer;
   font-size: 1rem;
   margin-top: 10px;
-  height: 66px;
 }
 
 .btn:hover {
@@ -321,11 +249,10 @@ small {
   justify-content: center;
   gap: 8px;
   border: 1px solid #ccc;
-  padding: 12px;
+  padding: 14px;
   border-radius: 6px;
   background: #fff;
   cursor: pointer;
-  height: 66px;
 }
 
 .google-btn img {
@@ -349,13 +276,10 @@ small {
 }
 
 /* Responsive: Mobile screens */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   body {
-    display: block;
-    height: auto;
-    overflow-y: auto;
+    padding: 0;
   }
-
   .topbar {
     display: flex;
     align-items: center;
@@ -367,10 +291,27 @@ small {
     top: 0;
     z-index: 20;
     height: 80px;
-
     border-bottom: 1px solid #d2dff3;
     margin-bottom: 10px;
+    width: 100%;
   }
+  .container {
+    width: 95%;
+  }
+  .left {
+    height: 400px;
+  }
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    display: block;
+    height: auto;
+    overflow-y: auto;
+  }
+
 
   #firstName,
   #lastName {
@@ -448,7 +389,7 @@ small {
     border-radius: 0;
     box-shadow: none;
     margin-top: 8px;
-    overflow: scroll;
+    overflow: scroll;padding: 0;
   }
 
   .left {
@@ -464,7 +405,7 @@ small {
   }
 
   .right {
-    width: 80%;
+    width: 100%;
     margin: 0px auto;
     padding: 20px;
   }
@@ -490,7 +431,19 @@ small {
     width: 100%;
   }
 }
-
+@media(max-width: 500px) {
+  .container {
+    width: 100%;
+    padding: 0;
+  }
+  .right {
+    width: 95%;
+  }
+  .left {
+    width: 95%;
+    
+  }
+}
 @media (max-width: 400px) {
   .left h1 {
     font-size: 1.6rem;
@@ -502,8 +455,7 @@ small {
   .left {
     position: relative;
     flex: none;
-    width: 324px;
-    height: 204px;
+    height: 254px;
     margin: 16px auto;
     background-size: cover;
     background-repeat: no-repeat;
