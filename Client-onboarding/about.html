@@ -3,33 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Trust & Credibility - SkillLink</title>
-    <link rel="stylesheet" href="trust.css" />
+    <title>About Your Needs - SkillLink</title>
+    <link rel="stylesheet" href="about.css" />
   </head>
   <body>
     <div class="container">
       <div class="logo">
         <!-- Replace with your logo image -->
-        <img src="logo.png" alt="SkillLink Logo" width="120" />
+        <img src="../Images/Logo/Frame 228.png" alt="SkillLink Logo" />
       </div>
 
-      <h1>Trust & Credibility</h1>
+      <h1>About Your Needs</h1>
 
       <form>
-        <label>Upload portfolio samples</label>
-        <input type="file" name="portfolio" />
+        <label>Types of Services Needed</label>
+        <input type="file" name="portfolio" placeholder="e.g, photographer" />
 
-        <label>Certifications or License</label>
-        <input type="file" name="license" />
+        <label>Frequence of Hiring</label>
+        <input
+          type="file"
+          name="license"
+          placeholder="one-time, occassional, ongoing"
+        />
 
-        <label>Upload your NIN</label>
+        <label>Job Location/Service Area</label>
         <input type="file" name="nin" />
 
         <label>Short Bio</label>
         <textarea name="bio" maxlength="200"></textarea>
         <small>max 200 characters</small>
 
-        <button type="submit" class="btn">Continue</button>
+        <div class="but-sub">
+          <button type="submit" class="btn">Continue</button>
+        </div>
       </form>
     </div>
   </body>
