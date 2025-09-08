@@ -97,18 +97,23 @@ nav {
     list-style-type: none;
     display: none;
 }
+.nav-menu-cont {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    height: auto;
+}
 .nav-menu a {
     text-decoration: none;
     color: var(--icon-color);
     font-weight: bold;
-    padding: 10px 30px;
+    padding: 10px 0;
     width: 100%;
     font-size: 20px;
+    display: block;
 }
 .nav-menu a:hover {
     background-color: var(--color-faint);
-    width: 100%;
-    border-radius: 10px;
 }
 .nav-menu:active {
     font-weight: bold;
@@ -525,6 +530,9 @@ footer {
     flex-direction: column;
     gap: 20px;
 }
+.footer-flex ul li {
+    color: var(--dark-green);
+}
 .footer-flex ul li a{
     text-decoration: none;
     color: var(--dark-green);
@@ -580,7 +588,6 @@ footer {
     width: 250px;
     text-align: center;
     background-color: var(--white-color);
-    height:300px;
     display: none;
     padding-top: 30px;
     padding-bottom: 30px;
@@ -705,7 +712,6 @@ footer {
     width: 250px;
     text-align: center;
     background-color: var(--white-color);
-    height:300px;
     display: none;
     padding-top: 30px;
     padding-bottom: 30px;
@@ -828,7 +834,6 @@ footer {
     width: 250px;
     text-align: center;
     background-color: var(--white-color);
-    height:300px;
     display: none;
     padding-top: 30px;
     padding-bottom: 30px;
@@ -911,7 +916,6 @@ footer {
     width: 250px;
     text-align: center;
     background-color: var(--white-color);
-    height:300px;
     display: none;
     padding-top: 30px;
     padding-bottom: 30px;
