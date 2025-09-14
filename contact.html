@@ -30,12 +30,14 @@
         </div>
 
         <ul class="nav-menu" id="nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="how-it-works.html">How It Works</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="Sign-In/index.html">Log In</a></li>
-            <li><a href="Sign-Up/index.html">Sign Up</a></li>
+            <div class="nav-menu-cont">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="how-it-works.html">How It Works</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="Sign-In/index.html">Log In</a></li>
+              <li><a href="Sign-Up/index.html">Sign Up</a></li>
+            </div>
         </ul>
 
         <i class="fas fa-bars" id="menu-icon"></i>
@@ -55,18 +57,18 @@
             <h1>Send Us a Message</h1>
             <form action="#">
                 <label for="fname">Full Name</label>
-                <input type="text" name="fname" id="full-name" placeholder="Enter Your Full Name"><br><br>
+                <input type="text" name="fname" id="full-name" placeholder="Enter Your Full Name" required><br><br>
 
                 <label for="email">Email Address</label>
-                <input type="email" name="address" id="mail" placeholder="Enter Yours Email Address"><br><br>
+                <input type="email" name="address" id="mail" placeholder="Enter Yours Email Address" required><br><br>
 
                 <label for="subject">Subject</label>
-                <input type="text" name="subject" id="purpose" placeholder="What is this regarding?"><br><br>
+                <input type="text" name="subject" id="purpose" placeholder="What is this regarding?" required><br><br>
 
                 <label for="message">Message</label>
-                <textarea name="message" id="message" placeholder="Type your message here"></textarea>
+                <textarea name="message" id="message" placeholder="Type your message here" required></textarea>
 
-                <a href="#" class="submit">Submit Message</a>
+                <button type="submit" class="submit">Submit Message</button>
             </form>
         </div>
 
@@ -189,39 +191,39 @@
         <div class="footer-div2">
         <ul>
           <li class="bold-li">For Clients</li>
-          <li><a href="#">How to Hire</a></li>
-          <li><a href="#">Talent Marketplace</a></li>
-          <li><a href="#">Payment Protection</a></li>
-          <li><a href="#">Success Stories</a></li>
+          <li><a href="how-it-works.html">How to Hire</a></li>
+          <li><a href="Sign-In/index.html">Talent Marketplace</a></li>
+          <li><a href="Sign-In/index.html">Payment Protection</a></li>
+          <li><a href="about.html">Success Stories</a></li>
         </ul>
       </div>
 
       <div class="footer-div2">
         <ul>
           <li class="bold-li">For Workers</li>
-          <li><a href="#">How to find work</a></li>
-          <li><a href="#">Create Profile</a></li>
-          <li><a href="#">Secure Payment</a></li>
-          <li><a href="#">Success Stories</a></li>
+          <li><a href="how-it-works.html">How to find work</a></li>
+          <li><a href="Sign-Up/index.html">Create Profile</a></li>
+          <li><a href="Sign-In/index.html">Secure Payment</a></li>
+          <li><a href="about.html">Success Stories</a></li>
         </ul>
       </div>
 
       <div class="footer-div3">
         <ul>
           <li class="bold-li">Resources</li>
-          <li><a href="#">Help Center</a></li>
-          <li><a href="#">Community</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Guides</a></li>
+          <li><a href="contact.html">Help Center</a></li>
+          <li>Community</li>
+          <li>Blog</li>
+          <li>Guides</li>
         </ul>
       </div>
 
       <div class="footer-div4">
         <ul>
           <li class="bold-li">Contact Us</li>
-          <li><a href="#">Support@Skillink.com</a></li>
-          <li><a href="#">+234 60 453 5673</a></li>
-          <li><a href="#">Nigeria</a></li>
+          <li><a href="mailto: Support@Skillink.com">Support@Skillink.com</a></li>
+          <li><a href="tel: +234604535673">+234 60 453 5673</a></li>
+          <li>Nigeria</li>
         </ul>
       </div>
       </div><!--footer flex End-->
