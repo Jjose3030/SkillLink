@@ -26,6 +26,17 @@ body {
   background-color: var(--Light-background);
 }
 
+/* Simple feedback messages */
+.msg {
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+.msg.info { background: #eef2ff; color: #1e3a8a; }
+.msg.success { background: #ecfdf5; color: #065f46; }
+.msg.error { background: #fef2f2; color: #991b1b; }
+
 body {
   display: flex;
   justify-content: center;

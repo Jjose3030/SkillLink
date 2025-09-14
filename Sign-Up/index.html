@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="sl-api-base" content="https://skill-link-gg2c.onrender.com/api" />
     <title>Create Account</title>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -49,7 +50,8 @@
 
       <div class="right">
         <h2>Create Account</h2>
-        <form>
+        <form id="signup-form" novalidate>
+          <div id="signup-msg" class="msg" hidden></div>
           <div class="row">
             <label for="firstName"
               >First Name<input
@@ -79,6 +81,15 @@
               required
           /></label>
 
+          <label for="phone"
+            >Phone Number<input
+              type="tel"
+              placeholder="Enter your phone number"
+              id="phone"
+              name="phone"
+              required
+          /></label>
+
           <label for="password"
             >Password<input
               type="password"
@@ -97,6 +108,23 @@
               name="confirmPassword"
               required
           /></label>
+
+          <fieldset class="account-type">
+            <legend>Account Type</legend>
+            <label><input type="radio" name="accountType" value="worker" checked /> Worker</label>
+            <label><input type="radio" name="accountType" value="employer" /> Employer</label>
+          </fieldset>
+
+          <div id="employer-fields" class="row" style="display:none;">
+            <label for="companyName" data-required>
+              Company Name
+              <input type="text" id="companyName" placeholder="Your company name" />
+            </label>
+            <label for="companyLocation" data-required>
+              Company Location
+              <input type="text" id="companyLocation" placeholder="City, Country" />
+            </label>
+          </div>
 
           <label class="checkbox">
             <input type="checkbox" /> I agree with <a href="#">Terms</a> and
@@ -141,7 +169,7 @@
       </div>
     </main>
 
-    <script>
+  <script>
       const btn = document.querySelector(".menu-btn");
       const drawer = document.getElementById("mobile-menu");
 
@@ -157,5 +185,6 @@
         });
       }
     </script>
+  <script src="../scripts/auth.js"></script>
   </body>
 </html>

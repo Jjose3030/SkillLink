@@ -714,27 +714,19 @@ p.dash-prof-image {
     gap: 10px;
 }
 .prof-port-item {
-    border-radius: 20px;
-    background-image: url(../Images/Worker/Frame\ 311.png);
+    border-radius: 12px;
+    background-image: none; /* remove hardcoded image */
+    background-color: var(--comp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.05);
 }
-.prof-port-item2 {
-    background-image: url(../Images/Worker/Frame\ 312.png);
-}
-.prof-port-item3 {
-    background-image: url(../Images/Worker/Frame\ 313.png);
-}
-.prof-port-item4 {
-    background-image: url(../Images/Worker/Frame\ 315.png);
-}
-.prof-port-item5 {
-    background-image: url(../Images/Worker/Frame\ 314.png);
-}
-.prof-port-item6 {
-    background-image: url(../Images/Worker/Frame\ 317.png);
-}
+.prof-port-item2,
+.prof-port-item3,
+.prof-port-item4,
+.prof-port-item5,
+.prof-port-item6 { background-image: none; }
 .prof-port-item7 {
     height: max-content;
     width: max-content;
@@ -852,6 +844,46 @@ p.dash-prof-image {
     flex-direction: column;
     gap: 15px;
 }
+
+/* Skeleton loader */
+.skeleton {
+    position: relative;
+    overflow: hidden;
+    background-color: #eef2f7;
+    border-radius: 8px;
+}
+.skeleton::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    transform: translateX(-100%);
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.6) 50%, rgba(255,255,255,0) 100%);
+    animation: shimmer 1.2s infinite;
+}
+@keyframes shimmer {
+    100% { transform: translateX(100%); }
+}
+.skeleton-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 2px var(--gray);
+}
+.skeleton-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #e2e8f0;
+}
+.skeleton-lines { flex: 1; display: flex; flex-direction: column; gap: 8px; }
+.skeleton-line { height: 12px; background: #e2e8f0; border-radius: 6px; }
+.skeleton-line.short { width: 40%; }
+.skeleton-line.medium { width: 65%; }
+.skeleton-line.long { width: 90%; }
 .invite-page-item, .active-page-item, .complete-page-item {
     background-color: var(--white-color);
     border-radius: 8px;
@@ -1020,6 +1052,98 @@ span.price {
     gap: 20px;
     align-items: flex-start;
 }
+/* --- Project Management (dynamic) details styles --- */
+/* container injected by scripts/projects.js -> .projects-grid, .projects-left, .projects-right */
+.projects-grid { display: grid; grid-template-columns: 240px 1fr; gap: 20px; align-items: start; }
+@media (max-width: 980px){ .projects-grid { grid-template-columns: 1fr; } }
+
+.projects-left { position: sticky; top: 10px; align-self: start; }
+.project-list { display: flex; flex-direction: column; gap: 6px; background: var(--white-color); border: 1px solid #eee; border-radius: 10px; padding: 6px; }
+.project-item-row { display:flex; flex-direction: column; gap:8px; padding:10px 8px; border-radius:8px; border:1px solid #f0f0f0; cursor:pointer; }
+.project-item-row:hover { background:#fafafa; }
+.project-item-row.selected { outline: 2px solid var(--color-green); }
+.project-item-row .row-main h3 { margin:0 0 4px 0; font-size:14px; }
+.project-item-row .meta { color:#666; font-size:11px; }
+.project-item-row .row-side { display:flex; flex-direction:column; align-items:flex-start; gap:4px; color:#444; font-size:11px; }
+@media (max-width: 980px){ .project-item-row .row-side{ align-items:flex-start; } }
+
+.projects-right { min-width: 0; }
+.project-details { background: var(--white-color); border: 1px solid var(--color-complete); border-radius: 14px; padding: 22px; box-shadow: 0 1px 3px rgba(16,24,40,.08); width: 100%; }
+
+/* Right side split: main details + aside (messages) */
+.projects-right-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 20px; align-items: start; }
+@media (max-width: 1100px){ .projects-right-grid { grid-template-columns: 1fr; } }
+.project-aside .aside-card, .aside-card { background: var(--white-color); border: 1px solid var(--color-complete); border-radius: 12px; padding: 14px; box-shadow: 0 1px 2px rgba(16,24,40,.06); }
+
+/* Header */
+.project-job-header h2 { font-size: 24px; margin-bottom: 10px; }
+.project-split { display:flex; justify-content: space-between; align-items: center; gap: 14px; border-bottom: 1px solid var(--color-complete); padding-bottom: 14px; }
+.project-split > p { color: var(--gray); font-weight: 600; font-size: 15px; }
+.project-profile { display:flex; align-items:center; gap:12px; }
+.project-image { width:44px; height:44px; border-radius:50%; background: var(--color-faint); flex-shrink:0; }
+.project-info h2 { font-size:18px; }
+.project-info p { color: var(--gray); font-size: 14px; }
+
+/* Meta */
+.mang-budget-cont { display:grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin: 16px 0; }
+.budget-cont, .deadline-cont { background: #fafafa; border: 1px solid var(--color-complete); border-radius: 12px; padding: 12px 14px; min-width: 160px; }
+.budget-cont p, .deadline-cont p { font-size: 13px; color: var(--gray); font-weight: 600; }
+.budget-cont h4, .deadline-cont h4 { margin-top: 4px; font-size: 20px; color: var(--color-black); }
+
+/* Progress */
+.project-progress { margin-top: 8px; }
+.project-progress progress { width: 100%; height: 12px; }
+
+/* Sections */
+.project-job-body > h2, .project-job-footer > h2, .project-messages > h2 { font-size: 20px; margin: 16px 0 8px; }
+
+/* Milestones */
+.mile-cont { border: 1px solid var(--color-complete); border-radius: 10px; padding: 8px; background: var(--white-color); }
+.mile-item { display:flex; justify-content: space-between; gap: 12px; padding: 12px 8px; border-bottom: 1px solid var(--color-complete); }
+.mile-item:last-child { border-bottom: none; }
+.mile-info h3 { font-size: 18px; }
+.mile-info p { color: var(--gray); font-size: 14px; }
+.mile-detail-cont { display:flex; gap: 18px; align-items: center; }
+.mile-deadline h3 { font-size: 15px; color: var(--gray); }
+.mile-deadline p { font-size: 14px; }
+.mile-button-cont { display:flex; gap: 10px; align-items: center; }
+.mm-but1 { background: var(--comp); color: var(--color-green); padding: 7px 12px; border-radius: 20px; font-size: 13px; font-weight: 600; border: 1px solid var(--color-complete); }
+
+/* Submissions */
+.project-upload { display:flex; flex-direction: column; gap: 10px; }
+.project-file { background:#fafafa; border:1px dashed var(--color-complete); border-radius:8px; padding:12px 14px; color:#475569; font-size:15px; }
+
+/* Actions */
+.project-foot-cont { margin-top: 12px; display:flex; flex-wrap: wrap; gap: 10px; }
+/* Footer now single column (messages moved to sidebar) */
+.project-job-footer { display: grid; grid-template-columns: 1fr; gap: 20px; }
+.project-footer-left, .project-footer-right { min-width: 0; }
+.p-but1 { background-color: var(--color-green); color: var(--white-color); border: none; padding: 10px 14px; border-radius: 10px; font-weight: 700; cursor: pointer; transition: var(--trans); font-size: 15px; }
+.p-but1[disabled] { opacity:.5; cursor:not-allowed; }
+.p-but1:hover { background-color: var(--color-hov); }
+
+/* Messages */
+.project-messages input { border: 1px solid var(--color-complete); background:#fff; font-size: 15px; padding: 10px 12px; }
+
+/* Inline notice messages used by scripts/projects.js */
+.msg { padding: 10px 12px; border-radius: 6px; font-size: 0.9rem; margin: 6px 0; }
+.msg.info { background: #eef2ff; color: #1e3a8a; }
+.msg.success { background: #ecfdf5; color: #065f46; }
+.msg.error { background: #fef2f2; color: #991b1b; }
+/* Refine message appearance/placement on Projects page */
+.section#project .project-cont > .msg { 
+    grid-column: 1 / -1; 
+    max-width: 560px; 
+    margin: 10px auto 14px; 
+    box-shadow: 0 6px 18px rgba(16,24,40,.08);
+    border: 1px solid #e5e7eb; 
+    display: flex; 
+    align-items: center; 
+    gap: 8px;
+}
+.section#project .project-cont > .msg.info { border-left: 4px solid #3b82f6; }
+.section#project .project-cont > .msg.success { border-left: 4px solid #22c55e; }
+.section#project .project-cont > .msg.error { border-left: 4px solid #ef4444; }
 .project-item {
     display: flex;
     flex-direction: column;
@@ -1257,8 +1381,69 @@ span.chat-time {
     align-items: center;
     border: none;
     background-color: var(--color-green);
-    color: var(--white-color);
 }
+#cert-list {
+    display: grid;
+    gap: 10px;
+    margin-top: 10px;
+}
+.cert-card {
+    display: grid;
+    grid-template-columns: 36px 1fr auto auto;
+    gap: 12px;
+    align-items: center;
+    padding: 10px 12px;
+    border: 1px solid var(--color-neutral-w);
+    border-radius: 10px;
+    background: var(--white-color);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+    transition: transform .08s ease, box-shadow .15s ease, border-color .15s ease;
+}
+.cert-card:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    border-color: var(--check);
+}
+.cert-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    display: grid;
+    place-items: center;
+    background: var(--comp);
+    color: var(--job);
+    font-weight: 700;
+}
+.cert-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--color-black);
+}
+.cert-actions a,
+.cert-actions button {
+    font-size: 13px;
+}
+.link-btn {
+    border: none;
+    background: transparent;
+    color: #0b5ed7;
+    cursor: pointer;
+    padding: 6px 8px;
+    border-radius: 6px;
+    text-decoration: underline;
+    transition: color .15s ease, background-color .15s ease;
+}
+.danger-btn {
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid var(--color-red);
+    color: var(--color-red);
+    background: transparent;
+    cursor: pointer;
+    transition: background-color .15s ease, color .15s ease, border-color .15s ease;
+}
+.link-btn:hover { color: #0947a3; background-color: rgba(11, 94, 215, 0.07); }
+.danger-btn:hover { background: rgba(239, 68, 68, 0.08); color: #b82727; border-color: #b82727; }
 .f-upload {
     margin-top: 15px;
 }

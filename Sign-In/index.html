@@ -3,19 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="sl-api-base" content="https://skill-link-gg2c.onrender.com/api" />
     <title>Login</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!DOCTYPE html>
-    <html lang="en">
-      <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Login - SkillLink</title>
-        <link rel="stylesheet" href="style.css" />
-      </head>
-      <body>
         <!-- Top Navigation Bar (Mobile) -->
         <header class="topbar" role="banner">
           <a class="brand" href="#">
@@ -57,8 +49,9 @@
             <h2>Login</h2>
             <p class="subtitle">please enter your login details to log in.</p>
 
-            <form>
-              <input type="email" placeholder="Email" required />
+            <form id="login-form" novalidate>
+              <div id="login-msg" class="msg" hidden></div>
+              <input id="login-email" type="email" placeholder="Email" required />
 
               <div class="password-row">
                 <input
@@ -73,7 +66,7 @@
 
               <div class="checkbox-row">
                 <label class="checkbox">
-                  <input type="checkbox" /> Keep me logged in
+                  <input id="keep-logged-in" type="checkbox" /> Keep me logged in
                 </label>
                 <a href="../Sign-In/reset.html" class="forgot">Forgot password?</a>
               </div>
@@ -161,10 +154,7 @@
             <h1>Welcome<br />back!</h1>
           </div>
         </div>
-      </body>
-    </html>
-
-    <script>
+  <script>
       const btn = document.querySelector(".menu-btn");
       const drawer = document.getElementById("mobile-menu");
 
@@ -192,5 +182,6 @@
         }
       }
     </script>
+  <script src="../scripts/auth.js"></script>
   </body>
 </html>
