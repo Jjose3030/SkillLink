@@ -2128,6 +2128,12 @@ p.comp, p.pend {
     width: 100%;
     font-size: 15px;
 }
+.budget-sliders {
+    grid-template-columns: 1fr;
+}
+.budget-inputs {
+    grid-template-columns: 1fr;
+}
 }
 @media (max-width: 380px) {
     .content-page-header > h2 {
