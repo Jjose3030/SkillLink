@@ -908,7 +908,7 @@
   function uploadWorkSubmission(projectId, file, note, milestoneId, cb){
     if (!projectId || !file) return cb && cb(new Error('Missing project or file'));
     // 1) Upload file
-    var t = (typeof getToken==='function')? getToken() : (sessionStorage.getItem('sl_token')||localStorage.getItem('sl_token'));
+  var t = (typeof getToken==='function')? getToken() : null;
     if (!t) return cb && cb(new Error('Please login again'));
     var fd = new FormData();
     // Use 'file' key to allow images/docs
