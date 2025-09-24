@@ -39,6 +39,7 @@ body > input {
     display: none;
     background-color: var(--white-color);
     border-bottom: 1px solid var(--color-black);
+    z-index: 30000;
 }
 #mobile-menu:checked ~ .mob-section .mob-head .bars .mob-opt {
     display: block;
