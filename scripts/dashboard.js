@@ -804,7 +804,7 @@
     if (!cont || !er || !Array.isArray(er.series)) return;
     cont.innerHTML = '';
     var canvas = document.createElement('canvas');
-    canvas.width = 360; canvas.height = 180;
+    canvas.width = 280; canvas.height = 180;
     cont.appendChild(canvas);
     var ctx = canvas.getContext('2d');
     if (!ctx){
