@@ -845,10 +845,14 @@ p.star-rating {
 .project-cont {
     margin-top: 35px;
     padding: 10px 15px;
-    display: grid;
+    /* display: grid;
     grid-template-columns: 1fr 300px;
-    gap: 20px;
+    gap: 20px; */
 }
+.projects-grid { display: grid; grid-template-columns: 200px 1fr; gap: 10px; align-items: start; }
+@media (max-width: 980px){ .projects-grid { grid-template-columns: 1fr; } }
+.projects-right-grid { display: grid; grid-template-columns: auto 0.3fr; gap: 10px; align-items: start; }
+@media (max-width: 1200px){ .projects-right-grid { grid-template-columns: 1fr !important; } }
 .project-job {
     padding: 20px;
     border-radius: 8px;
