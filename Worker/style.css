@@ -1549,6 +1549,10 @@ progress::-webkit-progress-value {
     cursor: pointer;
     transition: var(--trans);
 }
+.pay-but1:hover {
+    background-color: var(--color-hov);
+    color: var(--white-color);
+}
 .payment-nav {
     margin-top: 35px;
     padding-inline: 15px;
